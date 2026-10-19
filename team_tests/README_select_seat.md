@@ -137,7 +137,14 @@ multiple passengers. It neither prepares the seat stage nor clicks Continue.
 An error after a click can leave the browser changed; `ok: false` means the
 requested result was not verified, not that a rollback occurred.
 
-Mingyu Gao (`coldhac`) initiated this implementation and test preparation using
-coding assistance. Mengyu Wu's GitHub username and actual contribution have not
-yet been supplied and must be added by the team before requesting final review.
-No contribution is attributed to an absent teammate without confirmation.
+Proposed division of responsibilities, to be confirmed by both members before
+submission:
+
+- Mingyu Gao (`coldhac`): tool implementation, input validation, browser read-back
+  logic, and review of the failure-handling behavior.
+- Mengyu Wu: test execution, independent verification of success and failure
+  evidence, reproducibility checks, and submission documentation review.
+
+These are proposed responsibilities, not a claim that both members have already
+completed their reviews. The repository's PR template requests GitHub usernames;
+Mengyu Wu's username can be supplied when the team finalizes the submission.
