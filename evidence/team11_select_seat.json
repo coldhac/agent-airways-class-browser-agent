@@ -2,7 +2,7 @@
   "team": "Team 11",
   "tool": "select_seat",
   "site_url": "https://onyourmark.github.io/browser-agent-form/travel/",
-  "started_at_utc": "2026-10-19T20:32:18.207931+00:00",
+  "started_at_utc": "2026-10-20T21:12:35.058357+00:00",
   "python_version": "3.10.7",
   "playwright_version": "1.64.0",
   "headless": true,
@@ -402,6 +402,81 @@
       "passed": true
     },
     {
+      "name": "click without selection refused",
+      "proposal": {
+        "action": "select_seat",
+        "argument": {
+          "seat": "1A"
+        }
+      },
+      "before": {
+        "selected_seats": [
+          "2A"
+        ],
+        "seat_message": "Selected seat 2A.",
+        "continue_enabled": true,
+        "seat_stage_visible": true,
+        "passenger_stage_visible": false
+      },
+      "tool_return": {
+        "ok": false,
+        "message": "The browser did not confirm the requested seat and enabled Continue.",
+        "data": {
+          "seat": "1A",
+          "selected_seat": "2A",
+          "seat_message": "Selected seat 2A.",
+          "continue_enabled": true
+        }
+      },
+      "independent_check": {
+        "selected_seats": [
+          "2A"
+        ],
+        "seat_message": "Selected seat 2A.",
+        "continue_enabled": true,
+        "seat_stage_visible": true,
+        "passenger_stage_visible": false
+      },
+      "expected_ok": false,
+      "passed": true
+    },
+    {
+      "name": "unapproved path refused",
+      "proposal": {
+        "action": "select_seat",
+        "argument": {
+          "seat": "1A"
+        }
+      },
+      "before": {
+        "selected_seats": [
+          "2A"
+        ],
+        "seat_message": "Selected seat 2A.",
+        "continue_enabled": true,
+        "seat_stage_visible": true,
+        "passenger_stage_visible": false
+      },
+      "tool_return": {
+        "ok": false,
+        "message": "Only the Agent Airways practice page is allowed.",
+        "data": {
+          "seat": "1A"
+        }
+      },
+      "independent_check": {
+        "selected_seats": [
+          "2A"
+        ],
+        "seat_message": "Selected seat 2A.",
+        "continue_enabled": true,
+        "seat_stage_visible": true,
+        "passenger_stage_visible": false
+      },
+      "expected_ok": false,
+      "passed": true
+    },
+    {
       "name": "missing Continue refused",
       "proposal": {
         "action": "select_seat",
@@ -461,5 +536,5 @@
       "extra": true
     }
   ],
-  "finished_at_utc": "2026-10-19T20:32:24.107285+00:00"
+  "finished_at_utc": "2026-10-20T21:12:37.872429+00:00"
 }
