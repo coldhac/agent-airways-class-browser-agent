@@ -1,6 +1,6 @@
 # Team 11: select_seat
 
-Members: Mingyu Gao (`coldhac`) and Mengyu Wu (`mengyu0102`).
+Members: Mingyu Gao (`coldhac`) and Mengyu Wu (`Abigalemy`; commit author `mengyu0102`).
 
 ## Interface and scope
 
@@ -91,9 +91,14 @@ The existing GitHub workflow runs only the starter's offline checks.
 This tool handles one seat per call and depends on the practice site's current
 IDs, selected CSS class, and English message. Live tests require network access
 and Playwright Chromium. Central dispatcher integration remains for the TA.
+If verification fails after a click, the tool reports the observed failure and
+does not promise to roll back the selection.
 
 Mingyu Gao (`coldhac`) prepared the initial tool, tests, and evidence and
 coordinated the corrections addressing the TA's six review points. Mengyu Wu
-(`mengyu0102`) contributed subsequent implementation, test, and README revisions.
+(`Abigalemy`, commit author `mengyu0102`) contributed subsequent implementation,
+test, and README revisions.
 The contribution is submitted for TA review in
 [PR #16](https://github.com/onyourmark/agent-airways-class-browser-agent/pull/16).
+The complete [PR description](PR_select_seat.md) includes the model proposal,
+run commands, actual results, team contributions, and limitations.
